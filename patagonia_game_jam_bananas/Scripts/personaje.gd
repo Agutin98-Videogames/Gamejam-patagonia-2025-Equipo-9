@@ -109,7 +109,7 @@ func create_carried_item_visual():
 	
 	# Posicionar encima del jugador
 	carried_sprite.position = Vector2(0, -50)  # Ajusta según tu sprite
-	carried_sprite.scale = Vector2(0.8, 0.8)   # Hacerla más pequeña
+	carried_sprite.scale = Vector2(0.04, 0.04)   # Hacerla más pequeña
 
 func remove_carried_item_visual():
 	# Quitar el sprite visual
@@ -151,17 +151,7 @@ func add_points(amount: int):
 	score += amount
 	print("Puntos totales: ", score)
 	
-#extends CharacterBody2D
 #
-#@export var speed: float = 400.0
-#@export var jump_force: float = -800.0
-#@export var gravity: float = 1800.0
-#var score: int = 0
-#var screen_size
-#
-#func _ready():
-	#add_to_group("player")
-	#screen_size = get_viewport_rect().size
 #
 ## USAR SOLO _physics_process() para evitar conflictos
 #func _physics_process(delta: float) -> void:
