@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 var posicion_inicial: Vector2
-var posicion_arbol: Vector2 = Vector2(700, 0)  
+var posicion_arbol: Vector2 = Vector2(80, 0)  
 var estado = "caminando_al_arbol"
 var velocidad = 300.0
 var velocidad_escalada = 50.0
