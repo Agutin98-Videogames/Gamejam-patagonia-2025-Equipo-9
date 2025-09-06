@@ -1,0 +1,185 @@
+[gd_scene load_steps=21 format=3 uid="uid://bfjbvlgj6rdr5"]
+
+[ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bl0g2yhhpu6y0" path="res://Scripts/main.gd" id="1_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dn7fejylwi51i" path="res://Assets/Bananero.png" id="1_5vw27"]
+[ext_resource type="Texture2D" uid="uid://n6eiyd0q3gat" path="res://Assets/Central_1.png" id="1_272bh"]
+[ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://le4u3wn4uiya" path="res://Scripts/bananero.gd" id="2_kek77"]
+[ext_resource type="Script" uid="uid://dydsnb212aonn" path="res://Scripts/mono_obrero.gd" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c0hrrmdvhe06v" path="res://banana.tscn" id="3_4c57u"]
+[ext_resource type="Script" uid="uid://beossotsjj8ru" path="res://Scripts/area_2d_central.gd" id="4_kek77"]
+[ext_resource type="Texture2D" uid="uid://bp6u1bfllfvui" path="res://Assets/Mono_placeholder.png" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://yxdm3wdeog0w" path="res://Assets/Central_2.png" id="7_dg77c"]
+[ext_resource type="Texture2D" uid="uid://c8h1i608o5y03" path="res://Assets/Central_3.png" id="8_ycdy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
+size = Vector2(175, 227)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dg77c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_272bh")
+}],
+"loop": true,
+"name": &"primera",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dg77c")
+}],
+"loop": true,
+"name": &"segunda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ycdy4")
+}],
+"loop": true,
+"name": &"tercera",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bvp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kek77"]
+size = Vector2(134, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(1286.5, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mycd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lquwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lquwl")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"escalar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(126, 282)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_4c57u")
+
+[node name="Bananero" type="Sprite2D" parent="."]
+position = Vector2(168, 85)
+texture = ExtResource("1_5vw27")
+script = ExtResource("2_kek77")
+banana_scene = ExtResource("3_4c57u")
+
+[node name="Area2D_Central" type="Area2D" parent="."]
+position = Vector2(423, 301)
+collision_layer = 128
+collision_mask = 4
+script = ExtResource("4_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Central"]
+position = Vector2(138.5, 146.5)
+shape = SubResource("RectangleShape2D_5vw27")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D_Central"]
+position = Vector2(140, 130)
+sprite_frames = SubResource("SpriteFrames_dg77c")
+animation = &"primera"
+
+[node name="Mejoraste_a_nivel_2" type="Label" parent="Area2D_Central"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "¡Bien! Mejoraste a nivel 2"
+
+[node name="Mejoraste_a_nivel_3" type="Label" parent="Area2D_Central"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "¡Felicitaciones! Mejoraste a nivel 3"
+
+[node name="Personaje" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(612, 267)
+collision_layer = 4
+collision_mask = 137
+script = ExtResource("1_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Personaje"]
+sprite_frames = SubResource("SpriteFrames_1bvp3")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Area2D" type="Area2D" parent="Personaje"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_kek77")
+
+[node name="Piso" type="StaticBody2D" parent="."]
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Piso"]
+position = Vector2(600, 579)
+scale = Vector2(11.5234, 0.242188)
+texture = ExtResource("2_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso"]
+position = Vector2(608, 574)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Mono_obrero" type="CharacterBody2D" parent="."]
+position = Vector2(816, 402)
+collision_layer = 2
+script = ExtResource("3_1bvp3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mono_obrero"]
+sprite_frames = SubResource("SpriteFrames_7mycd")
+animation = &"caminar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mono_obrero"]
+position = Vector2(-12, -1)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 952.0
+offset_top = 24.0
+offset_right = 992.0
+offset_bottom = 47.0
+text = "aaaaaaa"
+
+[connection signal="body_entered" from="Personaje/Area2D" to="Personaje" method="_on_area_2d_body_entered"]
