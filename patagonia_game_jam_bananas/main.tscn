@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfjbvlgj6rdr5"]
+[gd_scene load_steps=10 format=3 uid="uid://bfjbvlgj6rdr5"]
 
 [ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dydsnb212aonn" path="res://Scripts/mono_obrero.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bp6u1bfllfvui" path="res://Assets/Mono_placeholder.png" id="4_lquwl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1bvp3"]
 animations = [{
@@ -20,10 +22,39 @@ size = Vector2(126, 126)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(1286.5, 20)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mycd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lquwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lquwl")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"escalar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(126, 282)
+
 [node name="Main" type="Node2D"]
 
 [node name="Personaje" type="CharacterBody2D" parent="."]
-position = Vector2(361, 439)
+position = Vector2(269, 424)
+collision_layer = 4
 script = ExtResource("1_0xm2m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Personaje"]
@@ -43,3 +74,16 @@ texture = ExtResource("2_h2yge")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piso"]
 position = Vector2(608, 574)
 shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Mono_obrero" type="CharacterBody2D" parent="."]
+position = Vector2(122, 416)
+collision_layer = 2
+script = ExtResource("3_1bvp3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mono_obrero"]
+sprite_frames = SubResource("SpriteFrames_7mycd")
+animation = &"caminar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mono_obrero"]
+position = Vector2(-12, -1)
+shape = SubResource("RectangleShape2D_272bh")
