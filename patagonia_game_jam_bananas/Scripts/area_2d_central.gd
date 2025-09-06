@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 	if Gameh.puntos == 3 and flag_ya_entre_a_mejora_3ra==false:
 		flag_ya_entre_a_mejora_3ra = true
-		$AnimatedSprite2D.play("segunda")
+		$AnimatedSprite2D.play("tercera")
 		var label_3 = $Mejoraste_a_nivel_3
 		label_3.visible = true
 		await get_tree().create_timer(1.5).timeout
