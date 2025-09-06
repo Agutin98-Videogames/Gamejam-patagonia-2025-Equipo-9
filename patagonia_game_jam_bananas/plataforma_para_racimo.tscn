@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://nvj0yp5n0xkk"]
+
+[ext_resource type="Texture2D" uid="uid://bftnddqwnrs8" path="res://Assets/piso_pasto.png" id="1_ef3ag"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vgp5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_divbi"]
+size = Vector2(43, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itruy"]
+size = Vector2(9.5, 34)
+
+[node name="Plataforma" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_vgp5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 25)
+shape = SubResource("RectangleShape2D_divbi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-21.25, -2)
+shape = SubResource("RectangleShape2D_itruy")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(20, -2)
+shape = SubResource("RectangleShape2D_itruy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 42)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ef3ag")

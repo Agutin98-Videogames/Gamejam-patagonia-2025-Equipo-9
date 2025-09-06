@@ -1,17 +1,19 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfjbvlgj6rdr5"]
+[gd_scene load_steps=25 format=3 uid="uid://bfjbvlgj6rdr5"]
 
 [ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bl0g2yhhpu6y0" path="res://Scripts/main.gd" id="1_4c57u"]
-[ext_resource type="Texture2D" uid="uid://dn7fejylwi51i" path="res://Assets/Bananero.png" id="1_5vw27"]
-[ext_resource type="Texture2D" uid="uid://n6eiyd0q3gat" path="res://Assets/Central_1.png" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://le4u3wn4uiya" path="res://Scripts/bananero.gd" id="2_kek77"]
+[ext_resource type="Texture2D" uid="uid://b2uyqek0w6plc" path="res://Assets/Bananero (1).png" id="2_w48qg"]
 [ext_resource type="Script" uid="uid://dydsnb212aonn" path="res://Scripts/mono_obrero.gd" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c0hrrmdvhe06v" path="res://banana.tscn" id="3_4c57u"]
 [ext_resource type="Script" uid="uid://beossotsjj8ru" path="res://Scripts/area_2d_central.gd" id="4_kek77"]
 [ext_resource type="Texture2D" uid="uid://bp6u1bfllfvui" path="res://Assets/Mono_placeholder.png" id="4_lquwl"]
-[ext_resource type="Texture2D" uid="uid://yxdm3wdeog0w" path="res://Assets/Central_2.png" id="7_dg77c"]
-[ext_resource type="Texture2D" uid="uid://c8h1i608o5y03" path="res://Assets/Central_3.png" id="8_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://bek4gvs08e8ql" path="res://Assets/Bananero (2).png" id="5_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dcskefnwoixam" path="res://Assets/Frabrica (1).png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://c1k7r7bppdbf2" path="res://Assets/Fabrica 2DA.png" id="9_yaehf"]
+[ext_resource type="Texture2D" uid="uid://cvui8irhim7jd" path="res://Assets/Fabrica 3RA.png" id="10_074og"]
+[ext_resource type="Texture2D" uid="uid://bftnddqwnrs8" path="res://Assets/piso_pasto.png" id="12_w48qg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
 size = Vector2(175, 227)
@@ -20,7 +22,7 @@ size = Vector2(175, 227)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_272bh")
+"texture": ExtResource("8_2cqfq")
 }],
 "loop": true,
 "name": &"primera",
@@ -28,7 +30,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_dg77c")
+"texture": ExtResource("9_yaehf")
 }],
 "loop": true,
 "name": &"segunda",
@@ -36,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_ycdy4")
+"texture": ExtResource("10_074og")
 }],
 "loop": true,
 "name": &"tercera",
@@ -62,6 +64,17 @@ size = Vector2(134, 135)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(1286.5, 20)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vivmo"]
+texture = ExtResource("12_w48qg")
+texture_region_size = Vector2i(172, 172)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2cqfq"]
+sources/1 = SubResource("TileSetAtlasSource_vivmo")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7mycd"]
 animations = [{
@@ -95,8 +108,14 @@ size = Vector2(126, 282)
 script = ExtResource("1_4c57u")
 
 [node name="Bananero" type="Sprite2D" parent="."]
-position = Vector2(168, 85)
-texture = ExtResource("1_5vw27")
+position = Vector2(156, 398)
+texture = ExtResource("2_w48qg")
+script = ExtResource("2_kek77")
+banana_scene = ExtResource("3_4c57u")
+
+[node name="Bananero2" type="Sprite2D" parent="."]
+position = Vector2(956, 398)
+texture = ExtResource("5_vivmo")
 script = ExtResource("2_kek77")
 banana_scene = ExtResource("3_4c57u")
 
@@ -113,7 +132,7 @@ shape = SubResource("RectangleShape2D_5vw27")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D_Central"]
 position = Vector2(140, 130)
 sprite_frames = SubResource("SpriteFrames_dg77c")
-animation = &"primera"
+animation = &"tercera"
 
 [node name="Mejoraste_a_nivel_2" type="Label" parent="Area2D_Central"]
 visible = false
@@ -151,17 +170,18 @@ shape = SubResource("RectangleShape2D_kek77")
 [node name="Piso" type="StaticBody2D" parent="."]
 collision_mask = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Piso"]
-position = Vector2(600, 579)
-scale = Vector2(11.5234, 0.242188)
-texture = ExtResource("2_h2yge")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piso"]
 position = Vector2(608, 574)
 shape = SubResource("RectangleShape2D_7mycd")
 
+[node name="TileMap" type="TileMap" parent="Piso"]
+tile_set = SubResource("TileSet_2cqfq")
+format = 2
+layer_0/tile_data = PackedInt32Array(196608, 1, 0, 2359301, 65537, 0, 2490381, 1, 1, 2490391, 65537, 1)
+
 [node name="Mono_obrero" type="CharacterBody2D" parent="."]
 position = Vector2(816, 402)
+scale = Vector2(0.5, 0.5)
 collision_layer = 2
 script = ExtResource("3_1bvp3")
 
