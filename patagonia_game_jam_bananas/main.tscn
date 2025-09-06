@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfjbvlgj6rdr5"]
+
+[ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bvp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(1286.5, 20)
+
+[node name="Main" type="Node2D"]
+
+[node name="Personaje" type="CharacterBody2D" parent="."]
+position = Vector2(361, 439)
+script = ExtResource("1_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Personaje"]
+sprite_frames = SubResource("SpriteFrames_1bvp3")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Piso" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Piso"]
+position = Vector2(600, 579)
+scale = Vector2(11.5234, 0.242188)
+texture = ExtResource("2_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso"]
+position = Vector2(608, 574)
+shape = SubResource("RectangleShape2D_7mycd")
