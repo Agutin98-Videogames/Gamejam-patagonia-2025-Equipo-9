@@ -1,15 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfjbvlgj6rdr5"]
-
-[ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://3pkr2cnjmrx7" path="res://banana-blackbarry-blackberries-svgrepo-com.svg" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://dkr32lkvkocr1" path="res://banana_2.gd" id="5_lquwl"]
-[gd_scene load_steps=10 format=3 uid="uid://bfjbvlgj6rdr5"]
+[gd_scene load_steps=13 format=3 uid="uid://bfjbvlgj6rdr5"]
 
 [ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bajq4awej8lji" path="res://icon.svg" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://dydsnb212aonn" path="res://Scripts/mono_obrero.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://3pkr2cnjmrx7" path="res://banana-blackbarry-blackberries-svgrepo-com.svg" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bp6u1bfllfvui" path="res://Assets/Mono_placeholder.png" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://dkr32lkvkocr1" path="res://banana_2.gd" id="5_lquwl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1bvp3"]
 animations = [{
@@ -30,6 +26,7 @@ size = Vector2(1286.5, 20)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mycd"]
 radius = 5.82948
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7mycd"]
 animations = [{
 "frames": [{
@@ -95,6 +92,7 @@ texture = ExtResource("3_h2yge")
 position = Vector2(-5, 3)
 rotation = -0.562895
 shape = SubResource("CapsuleShape2D_7mycd")
+
 [node name="Mono_obrero" type="CharacterBody2D" parent="."]
 position = Vector2(122, 416)
 collision_layer = 2
