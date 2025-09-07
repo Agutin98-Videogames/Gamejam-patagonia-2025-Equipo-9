@@ -16,6 +16,8 @@ var deposit_area = null  # Área donde puede depositar
 
 @onready var nodo_main = get_tree().current_scene
 
+var health = 3
+
 func _ready():
 	add_to_group("player")
 	screen_size = get_viewport_rect().size
@@ -28,19 +30,24 @@ func _physics_process(delta: float) -> void:
 		# Salto
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = jump_force
+			$AnimatedSprite2D.play("saltar")
 
 	# Movimiento lateral
 	var direction := Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * speed
-	
+	if Input.is_action_just_pressed("ui_left"):
+		$AnimatedSprite2D.flip_h = false
+	if Input.is_action_just_pressed("ui_right"):
+		$AnimatedSprite2D.flip_h = true
 	# Interacciones (recoger/depositar)
 	handle_interactions()
 	
 	# Animaciones
 	if velocity.length() > 0:
-		$AnimatedSprite2D.play()
+		$AnimatedSprite2D.play("correr")
 	else:
-		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play("idle")
+		
 
 	# Mover personaje
 	move_and_slide()
@@ -109,7 +116,7 @@ func create_carried_item_visual():
 	
 	# Posicionar encima del jugador
 	carried_sprite.position = Vector2(0, -50)  # Ajusta según tu sprite
-	carried_sprite.scale = Vector2(0.8, 0.8)   # Hacerla más pequeña
+	carried_sprite.scale = Vector2(0.04, 0.04)   # Hacerla más pequeña
 
 func remove_carried_item_visual():
 	# Quitar el sprite visual
@@ -151,44 +158,6 @@ func add_points(amount: int):
 	score += amount
 	print("Puntos totales: ", score)
 	
-#extends CharacterBody2D
-#
-#@export var speed: float = 400.0
-#@export var jump_force: float = -800.0
-#@export var gravity: float = 1800.0
-#var score: int = 0
-#var screen_size
-#
-#func _ready():
-	#add_to_group("player")
-	#screen_size = get_viewport_rect().size
-#
-## USAR SOLO _physics_process() para evitar conflictos
-#func _physics_process(delta: float) -> void:
-	## Gravedad
-	#if not is_on_floor():
-		#velocity.y += gravity * delta
-	#else:
-		## Salto
-		#if Input.is_action_just_pressed("ui_accept"):
-			#velocity.y = jump_force
-#
-	## Movimiento lateral
-	#var direction := Input.get_axis("ui_left", "ui_right")
-	#velocity.x = direction * speed
-	#
-	## Animaciones
-	#if velocity.length() > 0:
-		#$AnimatedSprite2D.play()
-	#else:
-		#$AnimatedSprite2D.stop()
-#
-	## Mover personaje
-	#move_and_slide()
-	#
-	## Mantener en pantalla (opcional)
-	#position.x = clamp(position.x, 0, screen_size.x)
-#
-#func add_points(amount: int):
-	#score += amount
-	#print("Puntos totales: ", score)
+func recibir_dano(dano):
+	# Lógica para recibir daño
+	health -= dano

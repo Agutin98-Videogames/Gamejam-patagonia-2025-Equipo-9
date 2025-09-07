@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp6u1bfllfvui"
-path="res://.godot/imported/Mono_placeholder.png-37dab6fad39eccb35cac7e83fdaa900c.ctex"
+uid="uid://1qyrtg32wekd"
+path="res://.godot/imported/mono_protector (4).png-8a6572041951d6d5871e99a6dad27c5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mono_placeholder.png"
-dest_files=["res://.godot/imported/Mono_placeholder.png-37dab6fad39eccb35cac7e83fdaa900c.ctex"]
+source_file="res://Assets/mono_protector (4).png"
+dest_files=["res://.godot/imported/mono_protector (4).png-8a6572041951d6d5871e99a6dad27c5b.ctex"]
 
 [params]
 

@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daqsqv8tpldf2"
-valid=false
+uid="uid://ce451mqpm0rap"
+path="res://.godot/imported/Mono_escalando-sheet.png-adf88728ffb1948f223d9d8e6824b3b5.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://banana-isolated-transparent-background_191095-14410.jpg"
+source_file="res://Assets/Mono_escalando-sheet.png"
+dest_files=["res://.godot/imported/Mono_escalando-sheet.png-adf88728ffb1948f223d9d8e6824b3b5.ctex"]
 
 [params]
 
