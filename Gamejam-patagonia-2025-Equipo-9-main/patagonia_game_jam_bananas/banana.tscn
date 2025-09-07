@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0hrrmdvhe06v"]
 
-[ext_resource type="Script" uid="uid://dkr32lkvkocr1" path="res://banana_2.gd" id="1_s1qo3"]
-[ext_resource type="Texture2D" uid="uid://3pkr2cnjmrx7" path="res://banana-blackbarry-blackberries-svgrepo-com.svg" id="2_vgp5d"]
+[ext_resource type="Script" uid="uid://dkr32lkvkocr1" path="res://Scripts/banana_2.gd" id="1_s1qo3"]
+[ext_resource type="Texture2D" uid="uid://3pkr2cnjmrx7" path="res://Assets/banana-blackbarry-blackberries-svgrepo-com.svg" id="2_vgp5d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s1qo3"]
 bounce = 0.15

@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Patagonia_game_jam_bananas"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://lxho2wxrs2mh"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
@@ -61,3 +61,8 @@ dash={
 2d_physics/layer_4="banana"
 2d_physics/layer_7="Bomba"
 2d_physics/layer_8="Central"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.278416, 0.629064, 0.76599, 1)

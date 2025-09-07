@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bfjbvlgj6rdr5"]
+[gd_scene load_steps=78 format=3 uid="uid://bfjbvlgj6rdr5"]
 
 [ext_resource type="Script" uid="uid://c4ep8xtbibk1c" path="res://Scripts/personaje.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bl0g2yhhpu6y0" path="res://Scripts/main.gd" id="1_4c57u"]
@@ -11,17 +11,37 @@
 [ext_resource type="Texture2D" uid="uid://3x05ldrt4jgi" path="res://Assets/Fabrica (1).png" id="8_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://c1k7r7bppdbf2" path="res://Assets/Fabrica 2DA.png" id="9_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cvui8irhim7jd" path="res://Assets/Fabrica 3RA.png" id="10_074og"]
+[ext_resource type="AudioStream" uid="uid://dm0gcwapk8vyn" path="res://Audio/SFX/power-up-game-sound-effect-359227.wav" id="11_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://jky0p3dijsyu" path="res://Assets/run_bananzas_WIP_V1_PGJ_2025-Sheet.png" id="11_yaehf"]
 [ext_resource type="Texture2D" uid="uid://b18opjkhrlndn" path="res://Assets/Idle _bananzas_WIP_V2_PGJ_2025-Sheet.png" id="12_074og"]
 [ext_resource type="Texture2D" uid="uid://bftnddqwnrs8" path="res://Assets/piso_pasto.png" id="12_w48qg"]
 [ext_resource type="Texture2D" uid="uid://vys5y1eg8sin" path="res://Assets/jump_bananzas_WIP_V1_PGJ_2025-Sheet.png" id="13_cegan"]
 [ext_resource type="Texture2D" uid="uid://3u8laom0vs6h" path="res://Assets/mono_corriendo-sheet.png" id="14_vivmo"]
+[ext_resource type="AudioStream" uid="uid://d3fyx5aj06exk" path="res://Audio/SFX/jump.wav" id="15_0odxb"]
+[ext_resource type="AudioStream" uid="uid://d2awwvmcqbeuk" path="res://Audio/SFX/walk.wav" id="15_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://ce451mqpm0rap" path="res://Assets/Mono_escalando-sheet.png" id="15_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://b66l6fymbo8er" path="res://Audio/SFX/bananza.wav" id="17_lswn8"]
 [ext_resource type="Script" uid="uid://b8a5odmllbdet" path="res://Scripts/bombardero.gd" id="18_074og"]
 [ext_resource type="Texture2D" uid="uid://1qyrtg32wekd" path="res://Assets/mono_protector (4).png" id="19_getpj"]
 [ext_resource type="Texture2D" uid="uid://bybga0cr7ht2u" path="res://Assets/mono_protector (3).png" id="20_ryguw"]
 [ext_resource type="Texture2D" uid="uid://c7r0kl2aps1b0" path="res://Assets/Mono protector durmiendo-Sheet.png" id="21_d13ii"]
 [ext_resource type="Texture2D" uid="uid://btr4gt12eendu" path="res://Assets/pila_de_bananas.png" id="22_ryguw"]
+[ext_resource type="AudioStream" uid="uid://bc5isubrpirxl" path="res://Audio/Música/Soundtrack Juego.wav" id="23_d13ii"]
+[ext_resource type="AudioStream" uid="uid://btp5xvroxp4ex" path="res://Audio/SFX/gorila.wav" id="26_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://b0hmgnrjg46bm" path="res://Assets/Mono Kamikaze/mono-atropella-embestida.png" id="29_kq58d"]
+[ext_resource type="Texture2D" uid="uid://670gclk6ni44" path="res://Assets/Mono Kamikaze/Mono Atropellador.png" id="30_seu75"]
+[ext_resource type="Texture2D" uid="uid://coqdib6buaqrg" path="res://Assets/Backgound/Fondo_pasto2.tres" id="31_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://du7ld2hrtgyqy" path="res://Assets/Backgound/Fondo_pasto.tres" id="32_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://bygtr004ckpmc" path="res://Assets/Backgound/Fondo_Yerba_alta1.tres" id="33_gngh3"]
+[ext_resource type="Texture2D" uid="uid://ciposaupqqe14" path="res://Assets/Backgound/Fondo_Yerba_alta2.tres" id="34_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://d0vp01l06n5nm" path="res://Assets/Backgound/Fondo_Yerba_alta3.tres" id="35_qnost"]
+[ext_resource type="Texture2D" uid="uid://c8u4by7mhnnmv" path="res://Assets/Backgound/fon_colina.png" id="36_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://dqrve2dah77hb" path="res://Assets/Backgound/Fon_Montaña1.png" id="37_f6a44"]
+[ext_resource type="Texture2D" uid="uid://t5c2vipwfgh0" path="res://Assets/Backgound/Fon_Montaña2.png" id="38_0cbny"]
+[ext_resource type="Texture2D" uid="uid://cb8mh27v6j8jo" path="res://Assets/Backgound/Fondo_Cielo_Decoracion_Sol.tres" id="41_blkrb"]
+[ext_resource type="Texture2D" uid="uid://g6puey7fp6n3" path="res://Assets/Backgound/Fondo_Cielo_Decoracion_Nube3.tres" id="42_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://cmnb815dibo2" path="res://Assets/Backgound/Fondo_Cielo_Decoracion_Nube2.tres" id="42_abqjc"]
+[ext_resource type="Texture2D" uid="uid://cdcc87m1sywf8" path="res://Assets/Backgound/Fondo_Cielo_Decoracion_Banana.tres" id="42_d2t1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(1286.5, 20)
@@ -281,6 +301,36 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8e4i"]
+atlas = ExtResource("30_seu75")
+region = Rect2(0, 0, 344, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lmeg"]
+atlas = ExtResource("30_seu75")
+region = Rect2(0, 345, 344, 345)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cp0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_kq58d")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8e4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lmeg")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_4c57u")
 
@@ -306,51 +356,67 @@ shape = SubResource("RectangleShape2D_7mycd")
 [node name="Pastos_izquierda" type="Node" parent="Piso"]
 
 [node name="Pasto_1" type="Sprite2D" parent="Piso/Pastos_izquierda"]
-position = Vector2(61.5, 582)
+position = Vector2(65.4091, 585.414)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(0, 0, 147, 116.163)
 
 [node name="Pasto_2" type="Sprite2D" parent="Piso/Pastos_izquierda"]
-position = Vector2(208.5, 582.5)
+position = Vector2(212.409, 585.914)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 116.659, 147.237, 115.507)
 
 [node name="Pasto_3" type="Sprite2D" parent="Piso/Pastos_izquierda"]
-position = Vector2(355.5, 582)
+position = Vector2(359.409, 585.414)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 232.793, 147.237, 115.357)
 
 [node name="Pasto_4" type="Sprite2D" parent="Piso/Pastos_izquierda"]
-position = Vector2(502.5, 582.1)
+position = Vector2(506.409, 585.514)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 232.793, 147.237, 115.357)
 
+[node name="Pasto_Fondo" type="Sprite2D" parent="Piso/Pastos_izquierda"]
+z_index = -1
+position = Vector2(639, 598)
+scale = Vector2(9.27753, 0.855697)
+texture = ExtResource("12_w48qg")
+region_enabled = true
+region_rect = Rect2(0, 0, 147, 116.163)
+
 [node name="Pastos_derecha" type="Node" parent="Piso"]
 
 [node name="Pasto_1" type="Sprite2D" parent="Piso/Pastos_derecha"]
-position = Vector2(649, 582)
+position = Vector2(652.909, 585.414)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(0, 0, 147, 116.163)
 
 [node name="Pasto_2" type="Sprite2D" parent="Piso/Pastos_derecha"]
-position = Vector2(796, 582.5)
+position = Vector2(799.909, 585.914)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 116.659, 147.237, 115.507)
 
 [node name="Pasto_3" type="Sprite2D" parent="Piso/Pastos_derecha"]
-position = Vector2(943, 582)
+position = Vector2(946.909, 585.414)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 232.793, 147.237, 115.357)
 
 [node name="Pasto_4" type="Sprite2D" parent="Piso/Pastos_derecha"]
-position = Vector2(1090, 582.1)
+position = Vector2(1093.91, 585.514)
+scale = Vector2(0.998764, 1.12783)
 texture = ExtResource("12_w48qg")
 region_enabled = true
 region_rect = Rect2(-0.107764, 232.793, 147.237, 115.357)
@@ -384,6 +450,10 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "¡Felicitaciones! Mejoraste a nivel 3"
 
+[node name="AudioPowerUp" type="AudioStreamPlayer2D" parent="Area2D_Central"]
+stream = ExtResource("11_a6jrf")
+volume_db = -10.0
+
 [node name="Personaje" type="CharacterBody2D" parent="." groups=["player"]]
 z_index = 1
 position = Vector2(612, 267)
@@ -407,6 +477,17 @@ shape = SubResource("RectangleShape2D_lquwl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje/Area2D"]
 position = Vector2(-4, -0.25)
 shape = SubResource("RectangleShape2D_kek77")
+
+[node name="JumpAudio" type="AudioStreamPlayer2D" parent="Personaje"]
+stream = ExtResource("15_0odxb")
+volume_db = -10.0
+
+[node name="WalkAudio" type="AudioStreamPlayer2D" parent="Personaje"]
+stream = ExtResource("15_1u8w0")
+
+[node name="PickBananaAudio" type="AudioStreamPlayer2D" parent="Personaje"]
+stream = ExtResource("17_lswn8")
+volume_db = 5.0
 
 [node name="Mono_obrero" type="CharacterBody2D" parent="."]
 position = Vector2(816, 402)
@@ -432,15 +513,17 @@ offset_bottom = 47.0
 text = "aaaaaaa"
 
 [node name="Bombardero" type="CharacterBody2D" parent="."]
-position = Vector2(1087, 202)
+position = Vector2(1087, 232)
 script = ExtResource("18_074og")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bombardero"]
 sprite_frames = SubResource("SpriteFrames_h8e4i")
-animation = &"ataque"
+animation = &"durmiendo"
 flip_h = true
 
-[node name="Lanza_bomba" type="AudioStreamPlayer2D" parent="Bombardero"]
+[node name="AudioDropBomb" type="AudioStreamPlayer2D" parent="Bombardero"]
+stream = ExtResource("26_xuqvo")
+volume_db = -10.0
 
 [node name="Pila" type="StaticBody2D" parent="."]
 
@@ -451,4 +534,131 @@ texture = ExtResource("22_ryguw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pila"]
 polygon = PackedVector2Array(900, 551, 894, 493, 926, 449, 999, 372, 1068, 358, 1110, 358, 1135, 370, 1154, 415, 1154, 458, 1178, 491, 1205, 523, 1193, 552, 1055, 568)
 
+[node name="Música Juego Principal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_d13ii")
+volume_db = -10.0
+autoplay = true
+
+[node name="Mono vigia" type="AnimatableBody2D" parent="."]
+z_index = -1
+position = Vector2(274, -258)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mono vigia"]
+position = Vector2(-270, 494)
+rotation = -1.07592
+sprite_frames = SubResource("SpriteFrames_0cp0l")
+animation = &"Attack"
+
+[node name="Area2D" type="Area2D" parent="Mono vigia"]
+position = Vector2(-186, 520)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FondoPasto2" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(11, 506)
+scale = Vector2(0.618812, 0.618812)
+texture = ExtResource("31_0cp0l")
+
+[node name="FondoPasto" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(140, 514)
+scale = Vector2(0.637161, 0.637161)
+texture = ExtResource("32_d2t1y")
+
+[node name="FondoPasto3" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(304, 499)
+scale = Vector2(0.659283, 0.659283)
+texture = ExtResource("31_0cp0l")
+
+[node name="FondoPasto4" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(801, 512)
+scale = Vector2(0.539657, 0.539657)
+texture = ExtResource("31_0cp0l")
+
+[node name="FondoYerbaAlta1" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(55, 528)
+scale = Vector2(0.72758, 0.72758)
+texture = ExtResource("33_gngh3")
+
+[node name="FondoYerbaAlta2" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(376, 528)
+texture = ExtResource("34_0n3wm")
+
+[node name="FondoYerbaAlta3" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(450, 529)
+texture = ExtResource("35_qnost")
+
+[node name="FondoYerbaAlta4" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(230, 519)
+texture = ExtResource("33_gngh3")
+
+[node name="FondoYerbaAlta5" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(702, 516)
+texture = ExtResource("33_gngh3")
+
+[node name="FondoYerbaAlta6" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(835, 525)
+texture = ExtResource("34_0n3wm")
+
+[node name="FonColina" type="Sprite2D" parent="Background"]
+z_index = -3
+position = Vector2(850, 384)
+scale = Vector2(0.757349, 0.757349)
+texture = ExtResource("36_wnkbs")
+
+[node name="FonMontaña1" type="Sprite2D" parent="Background"]
+z_index = -4
+position = Vector2(557, 364)
+rotation = 3.14159
+scale = Vector2(0.84163, -0.903471)
+texture = ExtResource("37_f6a44")
+
+[node name="FonMontaña2" type="Sprite2D" parent="Background"]
+z_index = -4
+position = Vector2(299, 351)
+scale = Vector2(0.877858, 0.877858)
+texture = ExtResource("38_0cbny")
+
+[node name="FondoCieloDecoracionBanana" type="Sprite2D" parent="Background"]
+position = Vector2(495, 73)
+scale = Vector2(0.289765, 0.288232)
+texture = ExtResource("42_d2t1y")
+
+[node name="FondoCieloDecoracionSol" type="Sprite2D" parent="Background"]
+position = Vector2(982, 113)
+scale = Vector2(0.550362, 0.550362)
+texture = ExtResource("41_blkrb")
+
+[node name="FondoCieloDecoracionNube2" type="Sprite2D" parent="Background"]
+position = Vector2(743, 84)
+scale = Vector2(0.41763, 0.41763)
+texture = ExtResource("42_abqjc")
+
+[node name="FondoCieloDecoracionNube3" type="Sprite2D" parent="Background"]
+z_index = -4
+position = Vector2(221, 76)
+scale = Vector2(0.4847, 0.4847)
+texture = ExtResource("42_0cp0l")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Barra de bananzas" type="RigidBody2D" parent="."]
+
 [connection signal="body_entered" from="Personaje/Area2D" to="Personaje" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

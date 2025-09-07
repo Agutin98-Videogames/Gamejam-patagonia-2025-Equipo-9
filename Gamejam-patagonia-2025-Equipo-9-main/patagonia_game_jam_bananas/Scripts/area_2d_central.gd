@@ -1,12 +1,14 @@
 # Script para Area2D_Central (Area2D)
-extends Area2D
+extends Area2D;
 
-var flag_ya_entre_a_mejora_2da :bool = false
-var flag_ya_entre_a_mejora_3ra :bool = false
+var flag_ya_entre_a_mejora_2da :bool = false;
+var flag_ya_entre_a_mejora_3ra :bool = false;
+
+@onready var audioPowerUp = $AudioPowerUp;
 
 func _ready():
-	print("Área de depósito central lista")
-	$AnimatedSprite2D.play("primera")
+	print("Área de depósito central lista");
+	$AnimatedSprite2D.play("primera");
 	
 	# Conectar señales para detectar cuando el jugador entra/sale
 	body_entered.connect(_on_body_entered)
@@ -14,6 +16,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if Gameh.puntos == 2 and flag_ya_entre_a_mejora_2da==false:
+		audioPowerUp.play();
 		flag_ya_entre_a_mejora_2da = true
 		$AnimatedSprite2D.play("segunda")
 		var label_2 = $Mejoraste_a_nivel_2
@@ -26,6 +29,7 @@ func _process(delta: float) -> void:
 		tween.tween_callback(label_2.queue_free)
 
 	if Gameh.puntos == 3 and flag_ya_entre_a_mejora_3ra==false:
+		audioPowerUp.play();
 		flag_ya_entre_a_mejora_3ra = true
 		$AnimatedSprite2D.play("tercera")
 		var label_3 = $Mejoraste_a_nivel_3

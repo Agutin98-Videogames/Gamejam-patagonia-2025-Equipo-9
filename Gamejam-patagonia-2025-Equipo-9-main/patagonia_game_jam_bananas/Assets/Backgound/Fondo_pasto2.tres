@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://coqdib6buaqrg"]
+
+[ext_resource type="Texture2D" uid="uid://lg26j4nq4iw7" path="res://Assets/Backgound/Spritesheets/Fon_pasto.png" id="1_owgwj"]
+
+[resource]
+atlas = ExtResource("1_owgwj")
+region = Rect2(0, 0, 392, 216)

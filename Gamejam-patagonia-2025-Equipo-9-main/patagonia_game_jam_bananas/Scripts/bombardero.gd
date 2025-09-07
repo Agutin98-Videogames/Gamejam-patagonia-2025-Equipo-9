@@ -23,6 +23,7 @@ var esperando_lanzar = false
 var objetivo_lanzamiento: Vector2
 
 @export var bomba_scene: PackedScene
+@onready var audioDropBomb = $AudioDropBomb;
 
 func _ready():
 	posicion_y_inicial = global_position.y
@@ -125,6 +126,7 @@ func iniciar_ataque():
 	if not puede_lanzar or not jugador_ref or not bomba_scene:
 		return
 	
+	audioDropBomb.play();
 	var distancia_al_jugador = global_position.distance_to(jugador_ref.global_position)
 	
 	if distancia_al_jugador <= distancia_lanzar:

@@ -1,0 +1,28 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1757198943
+banana-blackbarry-blackberries-svgrepo-com.svg::CompressedTexture2D/CompressedTexture2D::1996892238423093634::1757124217::1757124218::1::::<><><>0<>0<>53b4e28a673cabedeeea1d2a0ce459b5<>res://.godot/imported/banana-blackbarry-blackberries-svgrepo-com.svg-b2a3db95d6bccdb1de7bbc9c6b13485f.ctex::
+banana-isolated-transparent-background_191095-14410.jpg::CompressedTexture2D/CompressedTexture2D::7193414728569187129::1757124035::1757124027::0::::<><><>0<>0<>ed96d15d21a7b8cefa5d057c7b7edf4f<>::
+banana.gd::GDScript/GDScript::5610643274031496149::1757127538::0::1::::<>RigidBody2D<><>0<>0<><>::
+banana.tscn::PackedScene/PackedScene::6543076285867143687::1757189151::0::1::::<><><>0<>0<><>::uid://dkr32lkvkocr1::::res://banana_2.gd<>uid://3pkr2cnjmrx7::::res://banana-blackbarry-blackberries-svgrepo-com.svg
+banana_2.gd::GDScript/GDScript::7897993795684492564::1757189151::0::1::::<>RigidBody2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::2406023377567920382::1757120707::1757121003::1::::<><><>0<>0<>3639b150d950e1d6d3545c6e931abe17<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene/PackedScene::2756043107811265796::1757198797::0::1::::<><><>0<>0<><>::uid://c4ep8xtbibk1c::::res://Scripts/personaje.gd<>uid://bl0g2yhhpu6y0::::res://Scripts/main.gd<>uid://bajq4awej8lji::::res://icon.svg<>uid://le4u3wn4uiya::::res://Scripts/bananero.gd<>uid://b2uyqek0w6plc::::res://Assets/Bananero (1).png<>uid://dydsnb212aonn::::res://Scripts/mono_obrero.gd<>uid://c0hrrmdvhe06v::::res://banana.tscn<>uid://beossotsjj8ru::::res://Scripts/area_2d_central.gd<>uid://bp6u1bfllfvui::::res://Assets/Mono_placeholder.png<>uid://bek4gvs08e8ql::::res://Assets/Bananero (2).png<>uid://dcskefnwoixam::::res://Assets/Frabrica (1).png<>uid://c1k7r7bppdbf2::::res://Assets/Fabrica 2DA.png<>uid://cvui8irhim7jd::::res://Assets/Fabrica 3RA.png<>uid://bftnddqwnrs8::::res://Assets/piso_pasto.png
+plataforma_para_racimo.tscn::PackedScene/PackedScene::956399283026111186::1757189151::0::1::::<><><>0<>0<><>::uid://bftnddqwnrs8::::res://Assets/piso_pasto.png
+::res://Assets/::1757189176
+banana (1).png::CompressedTexture2D/CompressedTexture2D::5323995089781289779::1757189151::1757189176::1::::<><><>0<>0<>17613fd6ab1b0c7833cbe68dca862bd4<>res://.godot/imported/banana (1).png-e24f699ad5e714d76c3f3fd6368ebf3e.ctex::
+banana (2).png::CompressedTexture2D/CompressedTexture2D::81941045436170670::1757189151::1757189176::1::::<><><>0<>0<>321f7c53ceb7792b05ff18b7ff18a722<>res://.godot/imported/banana (2).png-9d4634bae3b6203e05b4a511844c31d9.ctex::
+banana (3).png::CompressedTexture2D/CompressedTexture2D::3949912305173029784::1757189151::1757189176::1::::<><><>0<>0<>af3a841db695d5dff5db4dc6ec1388b9<>res://.godot/imported/banana (3).png-34079e2ab5d2f979b1130c790a5b15b7.ctex::
+Bananero (1).png::CompressedTexture2D/CompressedTexture2D::4324293024238010284::1757189151::1757189176::1::::<><><>0<>0<>1ca4bf307e3db450ceb7a2ecc46b7975<>res://.godot/imported/Bananero (1).png-713e63a81762a9bea1fb3a0963fbec3c.ctex::
+Bananero (2).png::CompressedTexture2D/CompressedTexture2D::2689592475316498303::1757189151::1757189176::1::::<><><>0<>0<>f951c8083d00f83a7603273e5353b7f4<>res://.godot/imported/Bananero (2).png-92bd7f63dec209dd37062c290169b085.ctex::
+Fabrica 2DA.png::CompressedTexture2D/CompressedTexture2D::6620370064774256625::1757189151::1757189176::1::::<><><>0<>0<>ab0f56d6137cff224e9849138bb07d34<>res://.godot/imported/Fabrica 2DA.png-beb1597a3331c1b4f0210a51e3d82799.ctex::
+Fabrica 3RA.png::CompressedTexture2D/CompressedTexture2D::6288639752784794805::1757189151::1757189176::1::::<><><>0<>0<>ff1eb105031f0e909f3e7732a84a1c3a<>res://.godot/imported/Fabrica 3RA.png-a455a78f4f41d0f79b4a1e2b26901153.ctex::
+Fabrica (1).png::CompressedTexture2D/CompressedTexture2D::2014340392034797936::1757189151::1757189176::1::::<><><>0<>0<>c0d6e3ab64bfebba6c160d304207d66a<>res://.godot/imported/Fabrica (1).png-92fdb2fcd79b2bb622c7af16dfdb3e95.ctex::
+Mono_placeholder.png::CompressedTexture2D/CompressedTexture2D::3504509879898379516::1757129586::1757129586::1::::<><><>0<>0<>82879832b139fa2df06e6a061dffd156<>res://.godot/imported/Mono_placeholder.png-37dab6fad39eccb35cac7e83fdaa900c.ctex::
+piso_pasto.png::CompressedTexture2D/CompressedTexture2D::81687733553018833::1757189151::1757189176::1::::<><><>0<>0<>19ba28f788b819451f4327587660f241<>res://.godot/imported/piso_pasto.png-7d8d938e11fe6533fb5353f9c56549ed.ctex::
+::res://Scripts/::1757191539
+area_2d_central.gd::GDScript/GDScript::2697203162470594994::1757189151::0::1::::<>Area2D<><>0<>0<><>::
+bananero.gd::GDScript/GDScript::782132804972632288::1757189151::0::1::::<>Sprite2D<><>0<>0<><>::
+Gameh.gd::GDScript/GDScript::175047291856262523::1757189151::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript/GDScript::3210521197667932789::1757189151::0::1::::<>Node2D<><>0<>0<><>::
+mono_obrero.gd::GDScript/GDScript::8851103648295307823::1757189151::0::1::::<>CharacterBody2D<><>0<>0<><>::
+personaje.gd::GDScript/GDScript::6817546267440253958::1757191539::0::1::::<>CharacterBody2D<><>0<>0<><>::
