@@ -158,6 +158,40 @@ func add_points(amount: int):
 	score += amount
 	print("Puntos totales: ", score)
 	
+<<<<<<< HEAD:Gamejam-patagonia-2025-Equipo-9-main/patagonia_game_jam_bananas/Scripts/personaje.gd
 func recibir_dano(dano):
 	# Lógica para recibir daño
 	health -= dano
+=======
+#
+#
+## USAR SOLO _physics_process() para evitar conflictos
+#func _physics_process(delta: float) -> void:
+	## Gravedad
+	#if not is_on_floor():
+		#velocity.y += gravity * delta
+	#else:
+		## Salto
+		#if Input.is_action_just_pressed("ui_accept"):
+			#velocity.y = jump_force
+#
+	## Movimiento lateral
+	#var direction := Input.get_axis("ui_left", "ui_right")
+	#velocity.x = direction * speed
+	#
+	## Animaciones
+	#if velocity.length() > 0:
+		#$AnimatedSprite2D.play()
+	#else:
+		#$AnimatedSprite2D.stop()
+#
+	## Mover personaje
+	#move_and_slide()
+	#
+	## Mantener en pantalla (opcional)
+	#position.x = clamp(position.x, 0, screen_size.x)
+#
+#func add_points(amount: int):
+	#score += amount
+	#print("Puntos totales: ", score)
+>>>>>>> 25899977b664acef1aa051da35fa60931fb3e58d:patagonia_game_jam_bananas/Scripts/personaje.gd
