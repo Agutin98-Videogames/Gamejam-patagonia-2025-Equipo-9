@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5xxvodjpy0fr"]
+
+[ext_resource type="Script" uid="uid://bwsp78q7jjwj6" path="res://Scripts/perdiste.gd" id="1_greie"]
+[ext_resource type="Texture2D" uid="uid://b73hgtu8qoqe2" path="res://Assets/Perdiste_background.png" id="2_d53tk"]
+
+[node name="Perdiste" type="Node2D"]
+script = ExtResource("1_greie")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 497.0
+offset_top = 87.0
+offset_right = 570.0
+offset_bottom = 110.0
+text = "PERDISTE"
+
+[node name="PerdisteBackground" type="Sprite2D" parent="."]
+position = Vector2(570, 320)
+texture = ExtResource("2_d53tk")

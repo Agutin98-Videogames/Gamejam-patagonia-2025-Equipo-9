@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0hrrmdvhe06v"]
+
+[ext_resource type="Script" uid="uid://dkr32lkvkocr1" path="res://Scripts/banana_2.gd" id="1_s1qo3"]
+[ext_resource type="Texture2D" uid="uid://bwjmqjh8nmghc" path="res://Assets/banana (3).png" id="2_5x30x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s1qo3"]
+bounce = 0.15
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mycd"]
+radius = 5.82948
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1qo3"]
+radius = 18.0278
+
+[node name="Banana" type="RigidBody2D" groups=["collectible"]]
+collision_layer = 8
+collision_mask = 9
+mass = 186.38
+physics_material_override = SubResource("PhysicsMaterial_s1qo3")
+script = ExtResource("1_s1qo3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 6)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5x30x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 3)
+rotation = -0.562895
+shape = SubResource("CapsuleShape2D_7mycd")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s1qo3")

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://d0vp01l06n5nm"]
+
+[ext_resource type="Texture2D" uid="uid://wv4lx2adg0k2" path="res://Assets/Backgound/Spritesheets/fon_yerba_alta.png" id="1_bwgqw"]
+
+[resource]
+atlas = ExtResource("1_bwgqw")
+region = Rect2(8, 336, 168, 72)

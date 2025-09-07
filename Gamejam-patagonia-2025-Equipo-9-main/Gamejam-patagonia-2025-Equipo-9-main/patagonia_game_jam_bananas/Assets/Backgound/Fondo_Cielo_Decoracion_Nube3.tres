@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://g6puey7fp6n3"]
+
+[ext_resource type="Texture2D" uid="uid://4ejbylps3ser" path="res://Assets/Backgound/Spritesheets/Fon_cielo_decoracion.png" id="1_g7isf"]
+
+[resource]
+atlas = ExtResource("1_g7isf")
+region = Rect2(64, 584, 424, 232)
